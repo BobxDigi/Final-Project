@@ -1,4 +1,4 @@
-SkyNova — Final Project (Halfway Submission)
+SkyNova — Final Project FINAL
 
 Description
 -----------
@@ -33,26 +33,21 @@ Validate each page using one of:
 - http://html5.validator.nu
 - http://validator.w3.org
 
-Tips: Ensure your repo is public, then paste the raw GitHub URL of each HTML file into the validator.
 
-Upload Instructions
--------------------
-1) Create a public GitHub repo (e.g., skynova-final-project).
-2) Upload all files and folders preserving this structure:
-   / (root)
-     index.html
-     about.html
-     features.html
-     gallery.html
-     contact.html
-     css/style.css
-     assets/img/ChatGPT_Image_Oct_14,_2025,_07_09_25_PM.png
-3) In Canvas, provide:
-   - The GitHub repository URL
-   - (Optional) A live preview via https://htmlpreview.github.io by pasting the GitHub link to index.html
+Requirements Checklist
+----------------------
+- [x] 3–7 pages with unique titles (Home, About, Features, Gallery, Contact)
+- [x] >= 3 subcategories in nav (About, Features, Gallery, Contact)
+- [x] External CSS controlling layout & typography
+- [x] Images & text on every page
+- [x] Appropriate meta tags (description, keywords, author)
+- [x] One email hyperlink (Contact page)
+- [x] Specialty fonts (Google Fonts: Bebas Neue, Nunito)
+- [x] Multimedia included (audio demo on Gallery)
+- [x] One page with a form (Contact) and one with a table (Features)
+- [x] Consistent design across pages
+- [x] User-friendly interface, readable code & comments
+- [x] Works as static site in modern browsers (Chrome, Firefox, Safari, Edge)
 
-Notes
------
-- Code is commented, consistently formatted, and uses semantic HTML tags.
-- Navigation is accessible (skip link, labeled nav), and focus styles are visible in CSS.
-- A table and a form are included as required.
+
+
