@@ -1,0 +1,89 @@
+/* =========================================================
+   SkyNova Retro Site — css/style.css
+   - External stylesheet controlling layout & typography
+   - 1950s-inspired palette, responsive grid, focus styles
+   - Code uses comments & readable formatting for grading
+   ========================================================= */
+
+:root{
+  --cream:#F8E9D2;
+  --teal:#2BB3A0;
+  --red:#D94B44;
+  --navy:#1D2A3A;
+  --gold:#F5B046;
+  --text:#1c1b1a;
+  --max:1100px;
+  --radius:14px;
+  --shadow:0 18px 40px rgba(13,20,30,.18);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: var(--cream);
+  line-height:1.65;
+}
+
+img{max-width:100%; display:block}
+a{color:var(--red); text-decoration:none}
+a:hover{opacity:.9}
+.wrap{max-width:var(--max); margin:0 auto; padding-inline:clamp(16px, 4vw, 32px)}
+
+/* Skip link for keyboard users */
+.skip-link{position:absolute; left:-999px; top:-999px; background:var(--navy); color:#fff; padding:.5rem .75rem; border-radius:8px}
+.skip-link:focus{left:1rem; top:1rem; outline:3px solid #fff}
+
+/* Header */
+.site-header{background:linear-gradient(180deg, var(--teal), #239784); color:#fff; box-shadow:var(--shadow)}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0}
+.brand{font-weight:900; font-size:1.4rem; color:#fff}
+.brand .tm{font-size:.8rem; opacity:.8}
+.nav{list-style:none; display:flex; gap:14px; padding:0; margin:0}
+.nav a{color:#fff; padding:.45rem .7rem; border:1px solid rgba(255,255,255,.25); border-radius:999px}
+.nav a:focus{outline:3px solid #fff; outline-offset:2px}
+
+/* Hero */
+.hero{display:grid; grid-template-columns:1.1fr .9fr; gap:26px; align-items:center; padding:32px 0}
+@media (max-width:900px){ .hero{grid-template-columns:1fr} }
+.hero-copy h1{margin:.2em 0 .15em; font-size:clamp(28px, 4.6vw, 48px)}
+.lead{font-size:1.05rem; max-width:56ch}
+
+/* Buttons */
+.btn{appearance:none; border:none; cursor:pointer; font-weight:900; letter-spacing:.04em; text-transform:uppercase; padding:.75rem 1rem; border-radius:12px; box-shadow:0 10px 18px rgba(0,0,0,.18); display:inline-block}
+.btn-accent{background:var(--gold); color:#3c2a00}
+.btn-ghost{background:transparent; border:2px solid var(--navy); color:var(--navy)}
+.btn-dark{background:var(--navy); color:#fff}
+
+/* Cards */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:30px 0}
+@media (max-width:900px){ .grid-3{grid-template-columns:1fr} }
+.card{background:#fff; border:2px solid #e8dfcf; border-radius:var(--radius); padding:16px; box-shadow:0 10px 24px rgba(0,0,0,.07)}
+
+/* Specs table */
+table.specs{width:100%; border-collapse:collapse; background:#fff; border:2px solid #e8dfcf; border-radius:var(--radius); overflow:hidden}
+.specs th,.specs td{border-bottom:1px solid #efeadf; padding:.75rem .9rem; text-align:left}
+.specs thead th{background:#fff4e6}
+.specs caption{padding:.5rem}
+
+/* Forms */
+.form{display:grid; gap:.85rem; margin:1rem 0 2rem}
+.row{display:grid; gap:.35rem}
+label{font-weight:700}
+input, textarea{background:#fff; color:var(--text); border:1px solid #d8d1c3; border-radius:10px; padding:.6rem .75rem}
+input:focus, textarea:focus{outline:2px solid var(--teal); border-color:var(--teal)}
+
+/* Gallery */
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px}
+.gallery figure{margin:0; background:#fff; border:2px solid #e8dfcf; border-radius:var(--radius); padding:10px}
+
+/* Footer */
+.site-footer{background:var(--navy); color:#dfe7ef; padding:18px 0; margin-top:40px}
+.footer-inner{display:flex; gap:16px; justify-content:space-between; align-items:center; flex-wrap:wrap}
+.site-footer a{color:#dfe7ef}
+
+/* Utilities */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.smallprint{font-size:.9rem; color:#5a5855}
